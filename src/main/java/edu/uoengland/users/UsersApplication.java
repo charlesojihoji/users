@@ -1,4 +1,4 @@
-package edu.uoenglang.users;
+package edu.uoengland.users;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
