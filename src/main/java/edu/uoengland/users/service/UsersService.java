@@ -15,4 +15,6 @@ public interface UsersService {
 	public Optional<Users> getAUser(UUID userId);
 
 	public void updateAUser(Users user, UUID userId);
+
+	public void deleteAUser(UUID userId);
 }
