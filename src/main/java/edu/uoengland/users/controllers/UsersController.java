@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -48,6 +49,14 @@ public class UsersController {
 		
 		usersService.updateAUser(user, userId);
 		
-		return "The USer with a User ID of " + userId + " has been updated.";
+		return "The User with a User ID of " + userId + " has been updated.";
+	}
+	
+	@DeleteMapping("delete/{userId}")
+	public String deleteAUser(@PathVariable UUID userId) {
+		
+		usersService.deleteAUser(userId);
+		
+		return "The User with a User ID of " + userId + " has been deleted.";
 	}
 }

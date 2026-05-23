@@ -50,5 +50,11 @@ public class UsersServiceImpl implements UsersService{
 		
 		usersRepository.save(updatedUser);
 	}
+
+	@Override
+	public void deleteAUser(UUID userId) {
+
+		usersRepository.deleteById(userId);
+	}
 	
 }
